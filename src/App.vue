@@ -1,31 +1,26 @@
 <template>
-  <div>
-    <router-view></router-view>
-  </div>
+  <img alt="Vue logo" src="./assets/logo.png" />
+  <HelloWorld msg="Welcome to Your Vue.js App" />
 </template>
 
 <script>
-import HelloWorld from "./CompsitionAPI/lifecycle";
-import { ref } from "vue";
+import HelloWorld from "./components/HelloWorld.vue";
+
 export default {
   name: "App",
-  setup() {
-    let msg = ref("Welcome use Vue Compositon Api");
-    let feel = ref("nice");
-    function changeMsg(val) {
-      msg.value = val;
-    }
-
-    return { msg, feel, changeMsg };
+  components: {
+    HelloWorld
   }
 };
 </script>
 
-<style scoped>
-body {
-  width: 100vw;
-  height: 100vh;
-  margin: 0 !important;
-  padding: 0;
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
 }
 </style>
